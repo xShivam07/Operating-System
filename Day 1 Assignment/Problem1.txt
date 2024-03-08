@@ -1,0 +1,104 @@
+Linux 
+Day 1 Assignment:
+
+Problem No 1:
+
+a) Navigate and List: 
+	
+Start by navigating to your home directory and list its contents. Then, move into a 
+directory named "LinuxAssignment" if it exists; otherwise, create it.
+
+Command : cd home     			//navigating to your home directory 
+	  ls 	     			//list its contents
+	  mkdir LinuxAssignment		//create directory named "LinuxAssignment"
+
+b) File Management: 
+
+ Inside the "LinuxAssignment" directory, create a new file named "file1.txt". Display its 
+ contents. 
+
+Command : cd LinuxAssignment       	//Inside the "LinuxAssignment" directory
+	  cat > file1.txt		//create a new file named "file1.txt"
+	  cat file1.txt			//Display its contents.
+
+c) Directory Management: 
+
+Create a new directory named "docs" inside the "LinuxAssignment" directory. 
+
+Command : mkdir docs			//Create a new directory named "docs" 
+
+d) Copy and Move Files: 
+
+Copy the "file1.txt" file into the "docs" directory and rename it to "file2.txt".
+
+Command : cp file1.txt docs/file2.txt	
+
+e) Permissions and Ownership: 
+
+Change the permissions of "file2.txt" to allow read, write, and execute permissions for 
+the owner and only read permissions for others. Then, change the owner of "file2.txt" to 
+the current user.
+
+Command : chmod 744 file2.txt   	//Change the permissions of "file2.txt" to allow read, write, and execute
+	  chown "$whoami" file2.txt 	//change the owner of "file2.txt" to the current user
+
+
+f) Final Checklist: 
+
+Finally, list the contents of the "LinuxAssignment" directory and the root directory to 
+ensure that all operations were performed correctly.
+
+Command : cd ..				//Come back to LinuxAssignment Directory
+	  ls -l				//list the contents of the "LinuxAssignment" directory
+	  cd /				//Come back to root diretory.
+	  ls				//list the contents of the root directory.
+
+g) File Searching: 
+
+a. Search for all files with the extension ".txt" in the current directory and its subdirectories. 
+b. Display lines containing a specific word in a file (provide a file name and the specific 
+word to search).
+
+Command : find . -type f -name "*.txt"   // Search for all files with the extension ".txt".
+	  grep "Shivam" file1.txt   	// Display lines containing a specific word in a file.
+
+h) System Information: 
+
+ Display the current system date and time.
+
+Command :  date				// Display the current system date and time
+
+i) Networking: 
+
+a. Display the IP address of the system. 
+b. Ping a remote server to check connectivity (provide a remote server address to ping).
+
+
+Command : ifconfig			//Display the IP address of the system.
+	  ping -c 4 google.com		//Ping a remote server to check connectivity.
+
+j) File Compression: 
+
+a. Compress the "docs" directory into a zip file. 
+b. Extract the contents of the zip file into a new directory. 
+
+Command : cd LinuxDirectory		//Come into LinuxDirectory.
+	  zip -r docs.zip docs		//Compress the "docs" directory into a zip file.
+	  mkdir newdocs			// make new directory
+	  unzip docs.zip -d newdocs	//Extract the contents of the zip file into a new directory
+
+k) File Editing: 
+
+a. Open the "file1.txt" file in a text editor and add some text to it. 
+b. Replace a specific word in the "file1.txt" file with another word (provide the original 
+word and the word to replace it with).
+
+Command : cat >> file1.txt		 //Open the "file1.txt" file in a text editor and add some text to it.
+	  sed "s/name/Name/g" file1.txt  //Open the "file1.txt" file in a text editor and add some text to it.
+
+
+//Problem 1 completed
+
+
+
+

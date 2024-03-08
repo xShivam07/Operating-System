@@ -1,0 +1,55 @@
+Linux 
+Day 1 Assignment:
+
+Problem No 2:
+
+a. Suppose you have a file named "data.txt" containing important information. Display the 
+  first 10 lines of this file to quickly glance at its contents using a command.
+
+Command : cat > data.txt 		//Create a file named "data.txt"
+	
+	//Write important information	
+
+
+	head -n 10 data.txt		//Display the first 10 lines of this file.
+
+b. Now, to check the end of the file for any recent additions, display the last 5 lines of 
+  "data.txt" using another command.
+
+Command : tail -n 10 data.txt		//display the last 5 lines of this file.
+
+c. In a file named "numbers.txt," there are a series of numbers. Display the first 15 lines of 
+   this file to analyze the initial data set.
+
+Command :cat > number.txt		//Create a file named "number.txt"
+	
+	//write important information
+
+	 head -n 10 number.txt		//Display the first 15 lines of this file.
+
+d. To focus on the last few numbers of the dataset, display the last 3 lines of "numbers.txt".
+
+Command : tail -n -3 number.txt		//display the last 3 lines of "numbers.txt".
+
+e. Imagine you have a file named "input.txt" with text content. Use a command to translate 
+  all lowercase letters to uppercase in "input.txt" and save the modified text in a new file 
+  named "output.txt."
+
+Command : cp  cp data.txt input.txt				//Create a file named "input.txt".
+	  tr '[:lower:]' '[:upper:]' < data.txt > output.txt	// to translate all lowercase letters to uppercase in "input.txt" and save the modified text in a new file named "output.txt."
+
+f. In a file named "duplicate.txt," there are several lines of text, some of which are 
+   duplicates. Use a command to display only the unique lines from "duplicate.txt." 
+
+Command : cp number.txt duplicate.txt		//Create a file named "duplicate.txt".
+	  sort duplicate.txt | uniq		//To display only the unique lines from "duplicate.txt." 
+
+g. In a file named "fruit.txt," there is a list of fruits, but some fruits are repeated. Use a 
+   command to display each unique fruit along with the count of its occurrences in 
+   "fruit.txt."	
+
+Command :  cat > fruit.txt			//Create a file named "fruit.txt".
+	  sort fruit.txt | uniq -c		//Display each unique fruit along with the count of its occurrences in "fruit.txt".
+
+
+//Problem 2 completed.
